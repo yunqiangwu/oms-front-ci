@@ -2,7 +2,7 @@ FROM node
 MAINTAINER qiangyun.wu 842269153@qq.com
 
 RUN npm install cnpm -g --registry=https://registry.npm.taobao.org
-RUN cnpm i -g npm
+# RUN cnpm i -g npm
 # RUN yarn config set registry https://registry.npm.taobao.org
 
 COPY ./run.sh /run.sh

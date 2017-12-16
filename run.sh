@@ -6,7 +6,9 @@ if [ x${BRANCH} == x ]; then
 fi
 git clone -b ${BRANCH} https://rdc.hand-china.com/gitlab/hand-ln/oms-front.git
 cd oms-front
+cnpm i
 pwd
 ls -la
 env
+npm start
 sleep 20

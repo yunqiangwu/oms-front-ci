@@ -6,6 +6,8 @@ RUN npm install cnpm -g --registry=https://registry.npm.taobao.org
 # RUN yarn config set registry https://registry.npm.taobao.org
 
 COPY ./run.sh /run.sh
+
+RUN chmod +x /run.sh
 # COPY ./.babelrc /workspace/
 # COPY ./package.json /workspace/
 WORKDIR /workspace/

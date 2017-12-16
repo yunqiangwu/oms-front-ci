@@ -1,0 +1,8 @@
+webhook-c --start-cmd "npm start" --wechat-to liling --ph git-webhook-proxy-server-front-server.193b.starter-ca-central-1.openshiftapps.com
+
+git add . && git commit -m "update app.js" --amend && git push --force
+
+
+babel-node.cmd ..\webhook-client\src\exec_handle.js  --start-cmd "npm start" --pa  ws://git-webhook-proxy-server-front-server.193b.starter-ca-central-1.openshiftapps.com --wechat-server http://10.1.255.119:8007/notice --a localhost
+
+webhook-c --start-cmd "npm start" --pa  ws://git-webhook-proxy-server-front-server.193b.starter-ca-central-1.openshiftapps.com --wechat-server http://10.1.255.119:8007/notice --a 10.1.255.119

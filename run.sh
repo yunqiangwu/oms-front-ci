@@ -5,17 +5,6 @@ if [ x${BRANCH} == x ]; then
   export BRANCH=develop
 fi
 
-export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
-export NVM_IOJS_ORG_MIRROR=https://npm.taobao.org/mirrors/iojs
-npm config set electron_mirror https://npm.taobao.org/mirrors/electron/
-npm config set sass_binary_site https://npm.taobao.org/mirrors/node-sass/
-npm config set phantomjs_cdnurl https://npm.taobao.org/mirrors/phantomjs/
-
-git config --global credential.helper store
-git config --global user.name yunqiangwu
-git config --global user.email yunqiang.wu@hand-china.com
-echo "https://Personal%20Access%20Token:1pdKxRgAwPd7kbJ5V-EX@rdc.hand-china.com/" > ~/.git-credentials
-
 git clone -b ${BRANCH} https://rdc.hand-china.com/gitlab/hand-ln/oms-front.git
 cd oms-front
 

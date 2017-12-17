@@ -1,6 +1,11 @@
 FROM node
 MAINTAINER qiangyun.wu 842269153@qq.com
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  net-tools \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
 RUN npm install cnpm -g --registry=https://registry.npm.taobao.org
 # RUN cnpm i -g npm
 # RUN yarn config set registry https://registry.npm.taobao.org

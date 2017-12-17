@@ -18,11 +18,12 @@ echo "https://Personal%20Access%20Token:1pdKxRgAwPd7kbJ5V-EX@rdc.hand-china.com/
 
 git clone -b ${BRANCH} https://rdc.hand-china.com/gitlab/hand-ln/oms-front.git
 cd oms-front
+
 cnpm i
 pwd
 
 cnpm i -g webhook-client
 
-webhook-c --start-cmd "npm start" --pa  ws://git-webhook-proxy-server-front-server.193b.starter-ca-central-1.openshiftapps.com --wechat-server http://10.1.255.119:8007/notice --a 10.1.255.119
+webhook-c --start-cmd "npm start" --stop-cmd "bash tool/stop_process_with_port.sh 8000" --pa  ws://git-webhook-proxy-server-front-server.193b.starter-ca-central-1.openshiftapps.com --wechat-server http://10.1.255.119:8007/notice --a ci.jajabjbj.top -p 8008
 
 sleep 20

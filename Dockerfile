@@ -25,8 +25,9 @@ RUN export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node \
   && git config --global user.email yunqiang.wu@hand-china.com \
   && echo "https://Personal%20Access%20Token:1pdKxRgAwPd7kbJ5V-EX@rdc.hand-china.com/" > ~/.git-credentials \
   && git clone -b develop https://rdc.hand-china.com/gitlab/hand-ln/oms-front.git \
-  && cd oms-front && cnpm i \
-  && rm -rf oms-front
+  && cd oms-front && cnpm i
+
+RUN rm -rf /workspace/oms-front
 
 # RUN cnpm i
 

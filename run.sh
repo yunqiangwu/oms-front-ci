@@ -25,6 +25,6 @@ pwd
 
 cnpm i -g webhook-client
 npm run build:dll
-webhook-c --start-cmd "npm start" --stop-cmd "bash tool/stop_process_with_port.sh 8000" --wechat-server ${NOTICE_URL} --a ${OMS_HOST} -p 8008
+webhook-c --start-cmd "npm start" --stop-cmd "bash tool/stop_process_with_port.sh 8000" --a ${OMS_HOST} -p 8008
 
 sleep 20
